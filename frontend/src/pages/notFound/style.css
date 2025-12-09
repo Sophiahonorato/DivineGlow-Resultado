@@ -1,0 +1,72 @@
+.notfound-container {
+  width: 100%;
+  height: 100vh;
+  background: #f8f3f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Círculo decorativo */
+.notfound-circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: #d7b1ab;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* Número 404 */
+.notfound-title {
+  font-size: 110px;
+  font-weight: 800;
+  color: #8d5249;
+  margin-bottom: 10px;
+}
+
+.notfound-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #633a34;
+}
+
+.notfound-sub {
+  font-size: 14px;
+  color: #6f6f6f;
+  margin-bottom: 28px;
+}
+
+/* Botão */
+.notfound-btn {
+  padding: 12px 26px;
+  background: #c98f86;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.notfound-btn:hover {
+  background: #b67870;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .notfound-title {
+    font-size: 80px;
+  }
+  .notfound-circle {
+    width: 300px;
+    height: 300px;
+  }
+}

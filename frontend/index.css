@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+  --color-primary-gray: #9c9c9c;
+  --color-secundary-orange-dark: #734B49;
+  --color-white: #FFFFFF;
+
+  /* FONTES */
+  --font-title: 'Montserrat', sans-serif;
+  --font-text: 'Poppins', sans-serif;
+  --font-grid: 'Quicksand', sans-serif;
+
+  --font-headline-h1-size: 3rem;
+  --font-headline-h2-size: 2.4rem;
+  --font-headline-h3-size: 1.95rem;
+  --font-body-size: 1rem;
+
+  /* PESOS – AGORA FICOU FÁCIL */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+/* ===== BASE ===== */
+html {
+  width: 100%;
+  min-height: 100%;
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-family: var(--font-text);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ===== TIPOGRAFIA GLOBAL ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+  font-size: var(--font-headline-h2-size);
+}
+
+p, a, li, span {
+  font-family: var(--font-text);
+}
+
+
+/* ===== ESTILOS GERAIS ===== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 100%;
+  padding: 60px 0;
+  position: relative;
+}
+
+.main-banner {
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+
+/* ===== FACILIDADES DE USO ===== */
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.curved-loop {
+  position: fixed;     /* fixa no topo e não some nunca */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;      /* garante que sempre aparece */
+  pointer-events: none;
+}
+
+

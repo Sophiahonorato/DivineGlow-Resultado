@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.discount-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 28px 0;  /* era 40px */
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 1400px; /* antes 1848px - reduzimos */
+  height: 400px;     /* antes 543px */
+  border-radius: 8px; /* antes 12px */
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+/* Sutil efeito bonitinho */
+.banner-img:hover {
+  transform: scale(0.99);
+}
+
+/* Responsivo */
+@media(max-width: 900px) {
+  .banner-img {
+    height: 340px;
+    max-width: 96%;
+  }
+}
+
+@media(max-width: 768px) {
+  .banner-img {
+    height: 260px;
+      display: none !important;
+  }
+
+
+}
+
+@media(max-width: 480px) {
+  .banner-img {
+    height: 200px;
+    border-radius: 6px;
+  }
+}

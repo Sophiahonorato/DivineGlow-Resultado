@@ -1,0 +1,219 @@
+/* ---------------------------
+   CONTÊINER GERAL
+---------------------------- */
+.best-container {
+  text-align: center;
+  padding: 20px 0;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.card p{
+  font-family: var(--font-text);
+  font-size: 12px;
+  font-weight:var(--font-weight-light);
+}
+
+
+
+.best-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6A3D36;
+  margin-bottom: 25px;
+}
+
+/* ---------------------------
+   CARROSSEL
+---------------------------- */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 14px;
+  padding: 10px;
+  width: 72%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------------------
+   CARDS (MENOR)
+---------------------------- */
+.card {
+  min-width: 190px;         /* ↓ diminuiu */
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ---------------------------
+   IMG DO CARD (MENOR)
+---------------------------- */
+.card-img {
+  width: 100%;
+  height: 160px;             /* ↓ diminuído */
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.08);
+}
+
+/* ---------------------------
+   INFO DO CARD
+---------------------------- */
+.card-info {
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.rating {
+  color: #FFC400;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.card-title {
+  font-size: 13px;            /* ↓ menor */
+  font-weight: 700;
+  margin: 2px 0;
+}
+
+.card-desc {
+  font-size: 11px;            /* ↓ menor */
+  color: #444;
+  margin-bottom: 3px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #7a4a42;
+}
+
+/* ---------------------------
+   SETAS
+---------------------------- */
+.arrow {
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+  z-index: 5;
+}
+
+.arrow:hover {
+  background-color: #f1dfdd;
+}
+
+/* ---------------------------
+   BOTÃO "VER PRODUTOS"
+---------------------------- */
+/* ---------------------------
+   BOTÃO "VER PRODUTOS" — LUXO DIVINE GLOW
+---------------------------- */
+.button-products {
+  margin: 30px auto 0;
+  width: 180px;
+  padding: 12px 24px;
+
+  background: linear-gradient(135deg, #d8a79d 0%, #b3786c 50%, #8d5148 100%);
+  border-radius: 40px;
+  border: none;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+  transition: 
+    transform .28s ease,
+    box-shadow .28s ease,
+    filter .3s ease;
+  
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18),
+              inset 0 1px 4px rgba(255,255,255,0.15);
+}
+
+.button-products:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 
+    0 12px 28px rgba(0,0,0,0.22),
+    inset 0 2px 6px rgba(255,255,255,0.25);
+  filter: brightness(1.05);
+}
+
+.button-products:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+
+/* ---------------------------
+   RESPONSIVO
+---------------------------- */
+@media (max-width: 768px) {
+  .carousel {
+    width: 88%;
+    gap: 12px;
+  }
+
+  .card {
+    min-width: 170px;
+  }
+
+  .card-img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    min-width: 150px;
+  }
+
+  .card-img {
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 12px;
+  }
+
+  .card-desc {
+    font-size: 10px;
+  }
+}
+
+.card h3{
+    font-family: var(--font-grid);
+    font-weight: var(--font-weight-regular);
+}

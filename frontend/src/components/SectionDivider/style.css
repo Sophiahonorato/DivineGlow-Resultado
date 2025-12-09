@@ -1,0 +1,29 @@
+.section-divider-wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.section-divider-wrapper::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background: #d1d1d1;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.section-divider-title {
+  position: relative;
+  background: #fff;
+  padding: 0 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #7b5242;
+  z-index: 2;
+}

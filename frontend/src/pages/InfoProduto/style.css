@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+/* ===================== LAYOUT GERAL ===================== */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+
+/* ===================== IMAGEM DO PRODUTO ===================== */
+
+.produto img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===================== CONTAINER DAS INFORMAÇÕES ===================== */
+
+.container-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 450px;
+  max-width: 100%;
+}
+
+/* ===================== BOTÃO E QUANTIDADE ===================== */
+
+.quantity-buy {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0 25px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  background: #f5f1ee;
+  border-radius: 35px;
+  padding: 6px 14px;
+  font-family: var(--fonte-texto);
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e6d8d4;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6d4b3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter span {
+  margin: 0 12px;
+  font-weight: 600;
+  color: #3b2a23;
+}
+
+.btn-buy {
+  background: #6b4037;
+  color: #fff;
+  border: none;
+  padding: 12px 70px;
+  border-radius: 35px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-buy:hover {
+  filter: brightness(1.05);
+}
+
+/* ===================== INFO ===================== */
+
+.infoProduto h1 {
+  font-size: 30px;
+  color: #9E574B;
+}
+
+.infoProduto p {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #5A5A5A;
+}
+
+.infoProduto h2 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #2f2f2f;
+}
+
+.stars img {
+  width: 120px;
+  margin: 10px 0 20px 0;
+}
+
+/* ===================== DESCRIÇÃO ===================== */
+
+.descricao {
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: #6d6d6d;
+}
+
+/* ===================== DETALHES ===================== */
+
+.detalhes-produto {
+  width: 100%;
+  max-width: 1250px;
+  margin: 80px auto 0;
+  border-top: 2px solid #e4e4e4;
+  padding-top: 28px;
+  padding-inline: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  color: #6d6d6d;
+  line-height: 1.6;
+}
+
+.detalhes-produto strong {
+  color: #333;
+  margin-top: 10px;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .content-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .produto img {
+    width: 80%;
+  }
+}
+
+/* CELULARES */
+/* CELULARES */
+@media (max-width: 600px) {
+
+  /* Remove espaço do header */
+  header {
+    display: none !important;
+  }
+
+  .pagina-localizacao {
+    width: 100%;
+    margin-top: 20px;  /* antes era muito grande */
+    padding: 0 18px;
+  }
+
+  /* Título menor */
+  .pagina-localizacao h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .pagina-localizacao .sub {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 18px;
+  }
+
+  /* Botão serviços menor */
+  .botao-servicos {
+    height: 42px;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-bottom: 18px;
+  }
+
+  /* Texto "Filtre por região" */
+  .filtro-titulo {
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* GRID dos botões menor */
+  .botoes-regiao {
+    gap: 12px 14px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .botoes-regiao button {
+    height: 45px;
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 0 6px;
+  }
+
+  /* Botão ativo */
+  .botoes-regiao button.ativo {
+    font-size: 14px;
+  }
+
+  /* MAPA MAIS PEQUENO E AJUSTADO */
+  .mapa-container {
+    margin-top: 8px;
+  }
+
+  .mapa-wrapper iframe {
+    height: 300px;      /* antes 400px */
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}

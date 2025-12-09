@@ -1,0 +1,176 @@
+/* ===============================
+   SEÇÃO LANÇAMENTOS
+================================*/
+.lanc-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* IMAGEM DA ESQUERDA */
+.lanc-img-left {
+  width: 260px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* ÁREA DE CONTEÚDO */
+.lanc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* TÍTULO */
+.lanc-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #734b49;
+  margin-bottom: 18px;
+}
+
+/* GRID CARDS */
+.lanc-grid {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+/* ===============================
+   CARD • VERSÃO MENOR
+================================*/
+.card-produto {
+  width: 210px;
+  background: white;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.10);
+  transition: .3s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-3px);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-info h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 8px;
+}
+
+.stars {
+  color: #FFC400;
+  font-size: 12px;
+  margin: 3px 0;
+}
+
+.descricao {
+  font-size: 11px;
+  color: #555;
+  line-height: 15px;
+}
+
+.preco {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #121212;
+}
+
+/* =========================================
+   🔥 RESPONSIVO — TABLET
+=========================================*/
+@media (max-width: 768px) {
+  .lanc-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .lanc-img-left {
+    width: 70%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  .lanc-title {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* GRID vira carrossel horizontal */
+  .lanc-grid {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 14px;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .lanc-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-produto {
+    min-width: 180px;
+    width: 180px;
+    border-radius: 16px;
+  }
+
+  .card-img {
+    height: 150px !important;
+  }
+}
+
+/* =========================================
+   🔥 IPHONES — ATÉ 430px
+=========================================*/
+@media (max-width: 430px) {
+
+  /* REMOVE total a imagem grande */
+  .lanc-img-left {
+    display: none !important;
+  }
+
+  /* Centraliza conteúdo */
+  .lanc-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* GRID VIRA COLUNA */
+  .lanc-grid {
+    flex-direction: column !important;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Cards grandes e centralizados */
+  .card-produto {
+    width: 90% !important;
+    max-width: 340px;
+  }
+
+  .card-img {
+    height: 220px !important;
+  }
+}

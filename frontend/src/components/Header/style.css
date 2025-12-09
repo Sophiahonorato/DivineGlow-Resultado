@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ============================= */
+/* WRAPPER GERAL DO HEADER      */
+/* ============================= */
+
+.header-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================= */
+/* HEADER PRINCIPAL (logo + linha de baixo) */
+/* ============================= */
+
+.header {
+  position: absolute;      /* flutuando sobre o banner */
+  top: 22px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 40px;
+  background: transparent;
+}
+
+/* LOGO */
+
+.logo img {
+  height: 120px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* LINHA 2: input + nav + localização + usuário */
+/* ============================= */
+
+.header-bottom {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 1250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Input de pesquisa */
+
+.pesquisa {
+  width: 339px;
+  height: 39px;
+  padding: 10px 45px 10px 20px;
+
+  border-radius: 30px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+  color: #555;
+  background: #ffffff url("../../assets/images/pesquisa.svg") no-repeat right 15px center;
+  background-size: 20px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pesquisa:hover {
+  transform: scale(1.02);
+}
+
+.pesquisa:focus {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================= */
+/* NAV DE CATEGORIAS */
+/* ============================= */
+
+.nav-header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header li {
+  cursor: pointer;
+  color: #9E574B;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-header li:hover {
+  color: #7a3d34;
+  transform: translateY(-2px);
+}
+
+.nav-header li span {
+  font-size: 11px;
+}
+
+/* quando você quiser girar a setinha, pode usar a classe .active no li */
+.nav-header li.active span {
+  transform: rotate(180deg);
+}
+
+.pesquisa{
+  font-family: var(--font-title);
+}
+
+.localizacao,
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.localizacao span,
+.usuario span {
+  color: #9E574B;
+  font-weight: 600;
+}
+
+.localizacao img,
+.usuario img {
+  width: 22px;
+  height: 22px;
+}
+
+.localizacao:hover,
+.usuario:hover {
+  transform: translateY(-2px);
+  color: #9E574B;
+}
+
+/* ============================= */
+/* DROPDOWN DE PRODUTOS */
+/* ============================= */
+
+.dropdown-menu {
+  position: absolute;
+  top: 160px;          /* distância do topo do header-wrapper */
+  left: 0;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 32px 0 45px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 24px 24px;
+
+  animation: dropdownSpring 0.35s ease-out;
+}
+
+/* Título do dropdown */
+.dropdown-menu h3 {
+  text-align: center;
+  font-size: 22px;
+  color: #7a3d34;
+  margin-bottom: 24px;
+}
+
+/* GRID DOS CARDS DO DROPDOWN */
+
+.dropdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* Cada card (Link) */
+
+.dropdown-card {
+  width: 190px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dropdown-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.25s ease;
+}
+
+.dropdown-card span {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #6a3d36;
+  font-size: 14px;
+}
+
+.dropdown-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.dropdown-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Botão de fechar */
+
+.btn-close-dropdown {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #7a3d34;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-close-dropdown:hover {
+  transform: scale(1.08);
+  background: #ffffff;
+}
+
+/* ============================= */
+/* ANIMAÇÕES SIMPLES */
+/* ============================= */
+
+@keyframes dropdownSpring {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header-bottom {
+    gap: 18px;
+  }
+
+  .pesquisa {
+    width: 260px;
+  }
+
+  .nav-header ul {
+    gap: 16px;
+  }
+
+  .dropdown-grid {
+    gap: 18px;
+  }
+
+  .dropdown-card {
+    width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .pesquisa {
+    order: 3;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .nav-header {
+    order: 2;
+  }
+
+  .localizacao,
+  .usuario {
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    top: 180px;
+  }
+}
