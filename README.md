@@ -1,1 +1,1 @@
-# DivineGlow-Resultado
+# DivineGlow-
